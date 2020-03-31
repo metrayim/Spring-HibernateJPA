@@ -12,13 +12,24 @@ public class Employee {
 
     @ManyToOne
     private Dapartment dapartment;
+    @OneToOne(optional = false)
+    private PakingSpace pakingSpace;
 
     public Employee() {
     }
-    public Employee(String name,Double salary,Dapartment dapartment){
+    public Employee(String name,Double salary,Dapartment dapartment,PakingSpace pakingSpace){
         this.name=name;
         this.salary=salary;
         this.dapartment=dapartment;
+        this.pakingSpace=pakingSpace;
+    }
+
+    public PakingSpace getPakingSpace() {
+        return pakingSpace;
+    }
+
+    public void setPakingSpace(PakingSpace pakingSpace) {
+        this.pakingSpace = pakingSpace;
     }
 
     public int getId() {
@@ -60,6 +71,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 ", dapartment=" + dapartment +
+                ", pakingSpace=" + pakingSpace +
                 '}';
     }
 }
