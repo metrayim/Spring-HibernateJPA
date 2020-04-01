@@ -1,4 +1,4 @@
-package com.kshrd.HibernateJpa.Entities;
+package com.kshrd.HibernateJpa.entities;
 
 import javax.persistence.*;
 
